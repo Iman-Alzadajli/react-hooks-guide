@@ -33,6 +33,7 @@ To run this project locally:
 ```bash
 # Clone the project
 git clone https://github.com/your-username/react-hooks-guide
+```
 
 # Navigate to the project directory
 cd react-hooks-guide
@@ -42,3 +43,7 @@ npm install
 
 # Run the development server
 npm run dev
+
+Then open http://localhost:5173 in your browser.
+
+
