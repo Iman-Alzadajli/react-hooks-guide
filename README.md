@@ -1,12 +1,44 @@
-# React + Vite
+# React Hooks Guide 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an educational React project built using [Vite](https://vitejs.dev/) to demonstrate and practice various **React Hooks**.
 
-Currently, two official plugins are available:
+Each hook has its own dedicated page with:
+- A clear explanation of what it does
+- A small, interactive example to help understand how it works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💡 Why this project?
 
-## Expanding the ESLint configuration
+React Hooks are a core part of modern React development, but they can be confusing at first. This project is meant to help developers (especially beginners) learn and practice hooks in a simple and interactive way.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Hooks Covered
+
+### ✅ Basic Hooks
+- `useState`
+- `useEffect`
+- `useRef`
+
+### 📦 Additional Hooks
+- `useContext`
+- `useReducer`
+
+### 🧠 Advanced (Optional Later)
+- `useMemo`
+- `useCallback`
+- Custom Hooks
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+```bash
+# Clone the project
+git clone https://github.com/your-username/react-hooks-guide
+
+# Navigate to the project directory
+cd react-hooks-guide
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
