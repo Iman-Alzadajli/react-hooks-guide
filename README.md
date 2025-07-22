@@ -1,12 +1,28 @@
-# React + Vite
+# React Hooks Guide 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple educational React app created with Vite to demonstrate the usage of various React Hooks.
 
-Currently, two official plugins are available:
+## What we built so far
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### UseStateDemo
 
-## Expanding the ESLint configuration
+The `UseStateDemo` component demonstrates the usage of the `useState` Hook:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Initializes a state variable `message` with the default value `"Hello"`.
+- Displays the current `message`.
+- Includes an input box where users can type text.
+- When the input changes, it updates the `message` state using `setMessage`.
+- React automatically re-renders the component when the state changes, reflecting the updated text instantly.
+
+This example helps beginners understand how to manage state and handle user input in React functional components.
+
+## How to run
+
+1. Install dependencies:
+2. Run the development server:
+3. Open your browser and go to [http://localhost:5173](http://localhost:5173)
+
+## Next steps
+
+- Adding more hooks demos like `useEffect`, `useRef`, etc.
+- Implementing simple exercises to practice each hook.
