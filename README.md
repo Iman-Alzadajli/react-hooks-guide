@@ -1,12 +1,26 @@
-# React + Vite
+### 4. `UseContextDemo.jsx`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This component demonstrates how to use the `useContext` Hook to share data between components without prop drilling.
 
-Currently, two official plugins are available:
+#### 🔹 What it does:
+- It defines a `UserContext` using `React.createContext()`.
+- A parent component (`UseContextDemo`) provides a value using `<UserContext.Provider>`.
+- A nested child component (`UserProfile`) consumes that value using `useContext(UserContext)`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 💡 Why use `useContext`:
+- It allows components to **access shared state or values directly** without passing them manually through props at each level.
+- Commonly used for:
+  - User authentication
+  - Themes (dark/light)
+  - Language/locale settings
+  - Global app settings
 
-## Expanding the ESLint configuration
+#### 📌 Key behavior:
+- The context value is available to all components inside the provider.
+- Any component can "subscribe" to the context using `useContext()`.
+- No need to pass data manually through multiple nested components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+This example helps learners understand **React's context system** and how to avoid "prop drilling" by using `useContext`.
+
