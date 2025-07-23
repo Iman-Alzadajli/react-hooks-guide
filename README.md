@@ -1,12 +1,22 @@
-# React + Vite
+### 6. `UseMemoDemo.jsx`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This component demonstrates how to use the `useMemo` Hook to optimize expensive calculations.
 
-Currently, two official plugins are available:
+#### 🔹 What it does:
+- Defines an expensive calculation function that simulates a heavy computation.
+- Uses `useMemo` to memoize the result of the calculation based on the `number` state.
+- Includes an input field to change the `number`.
+- Includes a button to trigger a re-render without changing `number`.
+- Shows that the expensive calculation runs only when `number` changes, not on every render.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 💡 Why use `useMemo`:
+- Optimizes performance by avoiding expensive recalculations on every render.
+- Useful when you have costly computations that depend on specific values.
+- Helps keep UI responsive by caching results until dependencies change.
 
-## Expanding the ESLint configuration
+#### 📌 Example behavior:
+- Changing the number triggers the calculation and updates the displayed result.
+- Clicking the "Re-render" button increases a counter but does NOT re-run the expensive calculation.
+- You can see in the console log when the calculation actually runs.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This example helps learners understand memoization and performance optimization in React.
