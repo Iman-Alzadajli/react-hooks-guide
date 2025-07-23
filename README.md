@@ -1,12 +1,24 @@
-# React + Vite
+### 3. `UseRefDemo.jsx`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This component introduces the `useRef` Hook and how it can be used to directly access and manipulate DOM elements.
 
-Currently, two official plugins are available:
+#### 🔹 What it does:
+- It creates a reference using `useRef()` and assigns it to an `<input>` element.
+- When the user clicks a button, it focuses the input programmatically via `inputRef.current.focus()`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 💡 Why use `useRef`:
+- It’s used to **access or modify DOM elements** without triggering a re-render.
+- Common use cases:
+  - Focus an input field
+  - Control video/audio elements
+  - Store previous values or timers
+  - Avoid unnecessary renders (unlike `useState`)
 
-## Expanding the ESLint configuration
+#### 📌 Key behavior:
+- `inputRef` stays consistent across renders.
+- Changes to `inputRef.current` do **not** cause a re-render.
+- It’s ideal for "direct interaction" with DOM nodes inside React functional components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+This hook helps learners understand how to handle non-render-related logic in React.
