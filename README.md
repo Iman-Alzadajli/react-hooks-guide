@@ -1,12 +1,20 @@
-# React + Vite
+### 7. `UseCallbackDemo.jsx`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This component demonstrates how to use the `useCallback` Hook to memoize callback functions.
 
-Currently, two official plugins are available:
+#### 🔹 What it does:
+- Defines a button component that receives a callback function as a prop.
+- Uses `useCallback` to memoize the `increment` function, so it only changes if dependencies change.
+- This prevents unnecessary re-renders of child components that depend on the callback.
+- Also includes another state toggle button to show that updating unrelated state doesn’t cause the memoized callback to recreate.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 💡 Why use `useCallback`:
+- Improves performance by avoiding unnecessary re-creation of functions on every render.
+- Helps optimize components, especially when passing callbacks to memoized children.
+- Useful to prevent unwanted re-renders in complex component trees.
 
-## Expanding the ESLint configuration
+#### 📌 Example behavior:
+- Clicking "Increment" increases the count.
+- Clicking "Toggle Other State" changes unrelated state without causing the increment button to re-render unnecessarily (check console logs).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This example helps learners understand how to optimize function references in React components.
