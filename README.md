@@ -1,12 +1,46 @@
-# React + Vite
+# React Hooks Guide 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple educational React app built with [Vite](https://vitejs.dev/) to demonstrate the usage of different React Hooks.  
+Each hook has its own dedicated page with a basic explanation and interactive example.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Implemented Hooks
 
-## Expanding the ESLint configuration
+### 1. `UseStateDemo.jsx`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Demonstrates the usage of the `useState` Hook:
+
+- Initializes a state variable called `message` with the default value `"Hello"`.
+- Displays the current `message` on the screen.
+- Includes an input field that updates the message in real-time as the user types.
+- Uses `setMessage()` to update the state.
+- React re-renders the component whenever the state changes.
+
+This example helps beginners understand how to manage and update local component state.
+
+---
+
+### 2. `UseEffectDemo.jsx`
+
+Demonstrates the usage of the `useEffect` Hook to handle side effects:
+
+- Uses two state variables: `count` and `message`.
+- Every time the `count` changes, `useEffect` runs and updates the `message`.
+- The dependency array `[count]` ensures the effect runs **only** when `count` changes.
+- A button increases the counter, and the updated message reflects how many times the user clicked.
+
+This example introduces the concept of side effects and explains how to run logic after renders or state changes — similar to lifecycle methods in class components.
+
+---
+
+## 🛠 Getting Started
+
+To run this project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
