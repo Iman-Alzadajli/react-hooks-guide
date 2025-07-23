@@ -1,12 +1,21 @@
-# React + Vite
+### 5. `UseReducerDemo.jsx`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This component demonstrates how to use the `useReducer` Hook for managing more complex state logic.
 
-Currently, two official plugins are available:
+#### 🔹 What it does:
+- Defines a reducer function `counterReducer` that handles three action types: `'increment'`, `'decrement'`, and `'reset'`.
+- Uses `useReducer` to manage the state object `{ count }`.
+- Provides three buttons to dispatch actions that update the state accordingly.
+- Shows the current count value on the screen.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 💡 Why use `useReducer`:
+- Ideal for complex state management where multiple related state values and actions exist.
+- Provides a clear and predictable way to update state based on action types.
+- Often preferred over `useState` for non-trivial state logic or when state updates depend on previous state.
 
-## Expanding the ESLint configuration
+#### 📌 Example behavior:
+- Clicking "Increment" increases the count by 1.
+- Clicking "Decrement" decreases the count by 1.
+- Clicking "Reset" sets the count back to 0.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This example helps learners understand how to organize state updates with reducer functions in React functional components.
