@@ -1,6 +1,8 @@
 ﻿import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import UseStateDemo from './hooks/UseStateDemo.jsx';
 import UseEffectDemo from './hooks/UseEffectDemo'; // أضف هذا الاستيراد
+import UseRefDemo from './hooks/UseRefDemo'; // الاستيراد الجديد
+
 
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
                 <Link to="/">Home</Link>
                 <Link to="/use-state">useState</Link>
                 <Link to="/use-effect">useEffect</Link>
+                <Link to="/use-ref">useRef</Link>
+
 
             </nav>
 
@@ -17,6 +21,8 @@ function App() {
                 <Route path="/" element={<h2 style={{ padding: '1rem' }}>Choose a Hook from above 👆</h2>} />
                 <Route path="/use-state" element={<UseStateDemo />} />
                 <Route path="/use-effect" element={<UseEffectDemo />} />
+                <Route path="/use-ref" element={<UseRefDemo />} />
+
 
             </Routes>
         </BrowserRouter>
