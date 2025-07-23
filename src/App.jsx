@@ -4,6 +4,11 @@ import UseEffectDemo from './hooks/UseEffectDemo'; // أضف هذا الاستي
 import UseRefDemo from './hooks/UseRefDemo'; // الاستيراد الجديد
 import UseContextDemo from './hooks/UseContextDemo';
 import UseReducerDemo from './hooks/UseReducerDemo';
+import UseMemoDemo from './hooks/UseMemoDemo';
+
+
+
+
 
 
 
@@ -20,6 +25,7 @@ function App() {
                 <Link to="/use-ref">useRef</Link>
                 <Link to="/UseContextDemo">useContext</Link>
                 <Link to="/UseReducerDemo">useReducer</Link>
+                <Link to="/UseMemoDemo">useMemo</Link>
 
 
 
@@ -32,6 +38,7 @@ function App() {
                 <Route path="/use-ref" element={<UseRefDemo />} />
                 <Route path="/UseContextDemo" element={<UseContextDemo />} />
                 <Route path="/UseReducerDemo" element={<UseReducerDemo />} />
+                <Route path="/UseMemoDemo" element={<UseMemoDemo />} />
 
 
 
